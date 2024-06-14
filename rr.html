@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Fill Animation</title>
+  <style>
+    .input-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .input-box {
+      position: relative;
+      z-index: 1;
+      padding: 10px;
+      border: 2px solid #000;
+      background: transparent;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .input-box::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      background: #0170de; /* Fill color */
+      z-index: -1;
+      transition: width 0.5s ease;
+    }
+
+    .input-container:hover .input-box::before {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="input-container">
+    <input type="text" class="input-box" placeholder="Hover to see the fill animation">
+  </div>
+</body>
+</html>

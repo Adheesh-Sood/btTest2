@@ -1,0 +1,21 @@
+<!-- Include the QR Code library -->
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+
+<form id="signup-form">
+    <input type="text" id="name" placeholder="Enter your name" required>
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <button type="button" onclick="generateAndDisplayQR()">Generate QR Code</button>
+</form>
+<div id="qr-code"></div>
+
+<script>
+function generateAndDisplayQR() {
+    var name = encodeURIComponent(document.getElementById('name').value);
+    var email = encodeURIComponent(document.getElementById('email').value);
+    var url = `https://adheesh-sood.github.io/btTest2/display.html?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`;
+    var qr = qrcode(0, 'L');
+    qr.addData(url);
+    qr.make();
+    document.getElementById('qr-code').innerHTML = qr.createImgTag();
+}
+</script>

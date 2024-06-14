@@ -1,0 +1,32 @@
+<!-- display.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information</title>
+</head>
+<body>
+    <h1>User Information</h1>
+    <div id="userInfoDisplay"></div>
+
+    <script>
+        function getQueryParams() {
+            var params = {};
+            location.search.slice(1).split("&").forEach(function(item) {
+                var s = item.split("=");
+                params[decodeURIComponent(s[0])] = decodeURIComponent(s[1]);
+            });
+            return params;
+        }
+
+        function displayUserInfo() {
+            var params = getQueryParams();
+            document.getElementById('userInfoDisplay').innerHTML = 
+                `<p>Name: ${params.name}</p><p>Email: ${params.email}</p>`;
+        }
+
+        displayUserInfo();
+    </script>
+</body>
+</html>

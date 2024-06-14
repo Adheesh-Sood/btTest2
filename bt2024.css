@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Pacifico&family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&display=swap');
+
+h1{
+    font-family: "Azeret Mono", monospace;
+    font-size:60px;
+    background:linear-gradient(to right, #1a1aa1, #1111ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    user-select: none; /* Standard syntax */
+    -webkit-user-select: none; /* For WebKit browsers (Chrome, Safari) */
+    -moz-user-select: none; /* For Firefox */
+    -ms-user-select: none; /* For Internet Explorer/Edge */
+}
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.image-container img {
+    max-width: 40%;
+    border-radius: 10px;
+}
+
+table {
+    flex: 2;
+    margin-left: 20px;
+    width: 40%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #ffbf00;
+    color: #fff;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f0f0f0;
+}
+.specialEvent{
+    color:#1a1aa1;
+    font-weight: bold;
+}
+p{
+    font-family: "Azeret Mono", monospace !important;
+    font-size:17px !important;
+    color: #000 !important;
+    width: 50%;
+    font-weight: bolder !important;
+}
+.btWalkMainDiv{
+    background:linear-gradient(270deg,#ffbf00, #ffe69a );;
+    animation: gradient 10s ease infinite;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 1500px;
+}
+.imgDivBtWalk{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+}
+.imgDivBtWalk img{
+    border-radius: 8px;
+    width: 500px;
+    height:500px;
+}
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
+#imgslide1 , #imgslide2 , #imgslide3 , #imgslide4{
+    height: 300px;
+    width: 300px;
+}
+.img-slide {
+    display: flex; /* Establishes a flex container */
+    align-items: center; /* Vertically centers the flex items */
+    justify-content: space-between; /* Adds space between the image and text */
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    border-radius: 8px !important;
+}
+
+.img-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-text {
+    user-select: none;
+    background:linear-gradient(to right, #ffbf00, #ffe69a); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    font-size: 30px !important;
+    margin-left: 20px; /* Optional: Adjusts spacing between the image and the text */
+    white-space: nowrap; /* Ensures the text does not wrap */
+    overflow: hidden; /* Hides text that overflows the width */
+
+}
+h2{
+    background:linear-gradient(to right, #1111ff, #1a1aa1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    user-select: none; /* Standard syntax */
+    font-size:50px
+}
+
+.schedule{
+}
+.shDiv , .vidDiv{
+    flex: 1;
+
+}
+video{
+    flex: 1;
+    height: 300px;
+    width: 300px;
+}
